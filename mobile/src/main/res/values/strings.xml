@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">4CastAndroid</string>
-    <string name="api_key_owm">03eb2f9d11acfac72437e8ab5cad4ba2</string>
+    <string name="api_key_owm"></string>
 </resources>
