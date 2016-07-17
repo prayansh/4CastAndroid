@@ -105,4 +105,13 @@ public class WeatherData {
     public Weather getWeather() {
         return weather;
     }
+
+    public String getWeatherDescription() {
+        return weather.getDesc();
+    }
+
+
+    public WeatherType getWeatherType(){
+        return weather.getType();
+    }
 }

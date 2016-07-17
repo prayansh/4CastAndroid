@@ -4,13 +4,16 @@ package com.weather.forecast.android.data;
  * Created by Prayansh on 16-07-10.
  */
 public class Weather {
-    private WeatherStat stat;
+    private WeatherType type;
     private String desc;
-//    http://openweathermap.org/weather-conditions
-//    TODO Pavan create weather codes from above site
 
-    public WeatherStat getStat() {
-        return stat;
+    public Weather(int statId, String desc) {
+        type = WeatherType.statGenerator(statId);
+        this.desc = desc;
+    }
+
+    public WeatherType getType() {
+        return type;
     }
 
     public String getDesc() {

@@ -3,10 +3,10 @@ package com.weather.forecast.android.data;
 /**
  * Created by Prayansh on 16-07-10.
  */
-public enum WeatherStat {
+public enum WeatherType {
     THUNDERSTORM, DRIZZLE, RAIN, SNOW, ATMOSPHERE, SKY, EXTREME, ADDITIONAL;
 
-    private static WeatherStat statGenerator(int weatherId) {
+    public static WeatherType statGenerator(int weatherId) {
         if (weatherId >= 200 && weatherId < 300) {
             return THUNDERSTORM;
         } else if (weatherId >= 300 && weatherId < 400) {

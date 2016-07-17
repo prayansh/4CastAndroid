@@ -1,10 +1,9 @@
 package com.weather.forecast.android;
 
-import com.weather.forecast.android.data.Weather;
 import com.weather.forecast.android.data.WeatherData;
+import com.weather.forecast.android.data.WeatherType;
 import com.weather.forecast.android.parsers.JSONParsers;
 
-import org.junit.Before;
 import org.junit.Test;
 
 import static junit.framework.Assert.*;
@@ -38,8 +37,8 @@ public class ParseWeatherTest {
         assertEquals(1468158605, data.getSunsetTime());
         assertEquals(1468135130, data.getFetchTime());
 
-        assertTrue("moderate rain".equalsIgnoreCase(data.getWeather().getDesc()));
-        assertTrue("RAIN".equalsIgnoreCase(data.getWeather().getStat().name()));
+        assertTrue("moderate rain".equalsIgnoreCase(data.getWeatherDescription()));
+        assertEquals(WeatherType.RAIN, data.getWeatherType());
     }
 
     @Test
