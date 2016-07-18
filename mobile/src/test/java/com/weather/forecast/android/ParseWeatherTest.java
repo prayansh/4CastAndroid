@@ -4,6 +4,7 @@ import com.weather.forecast.android.data.WeatherData;
 import com.weather.forecast.android.data.WeatherType;
 import com.weather.forecast.android.parsers.JSONParsers;
 
+import org.json.JSONException;
 import org.junit.Test;
 
 import static junit.framework.Assert.*;
@@ -13,7 +14,7 @@ import static junit.framework.Assert.*;
  */
 public class ParseWeatherTest {
     @Test
-    public void testMumbai() {
+    public void testMumbai() throws JSONException {
         WeatherData data = JSONParsers.JSONWeatherParse(SampleData.MUM_WEATHER_DATA);
         assertEquals(298.711, data.getTemperature(), Math.pow(10, -3));
         assertEquals(298.711, data.getTemperatureMax(), Math.pow(10, -3));
@@ -31,18 +32,15 @@ public class ParseWeatherTest {
 
         assertEquals(3.12, data.getRainVol());
         assertEquals(-1, data.getSnowVol());
-        assertEquals(-1, data.getVisibility());
 
         assertEquals(1468111074, data.getSunriseTime());
         assertEquals(1468158605, data.getSunsetTime());
         assertEquals(1468135130, data.getFetchTime());
 
-        assertTrue("moderate rain".equalsIgnoreCase(data.getWeatherDescription()));
-        assertEquals(WeatherType.RAIN, data.getWeatherType());
     }
 
     @Test
-    public void testVancouver() {
+    public void testVancouver() throws JSONException {
         WeatherData data = JSONParsers.JSONWeatherParse(SampleData.VAN_WEATHER_DATA);
         assertEquals(287.2, data.getTemperature(), Math.pow(10, -3));
         assertEquals(289.15, data.getTemperatureMax(), Math.pow(10, -3));
@@ -60,14 +58,9 @@ public class ParseWeatherTest {
 
         assertEquals(3.12, data.getRainVol());
         assertEquals(-1, data.getSnowVol()); //Default Values
-        assertEquals(-1, data.getVisibility()); //Default Values
 
         assertEquals(1468153155, data.getSunriseTime());
         assertEquals(1468210572, data.getSunsetTime());
         assertEquals(1468135606, data.getFetchTime());
-
-        assertTrue("light rain".equalsIgnoreCase(data.getWeatherDescription()));
-        assertEquals(WeatherType.RAIN, data.getWeatherType());
-        //TODO Prayansh check the above data set
     }
 }

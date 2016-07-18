@@ -1,5 +1,7 @@
 package com.weather.forecast.android.data;
 
+import java.util.List;
+
 /**
  * Created by Prayansh on 16-07-10.
  */
@@ -7,18 +9,18 @@ public class WeatherData {
     private double temperature, temperatureMin, temperatureMax;
     private double pressure, seaPressure, grndPressure;
     private int humidity;
-    private long visibility;
     private double windSpeed;
     private int windOrientation;
     private int cloudiness;
     private long sunriseTime, sunsetTime, fetchTime;
     private double rainVol, snowVol;
-    private Weather weather;
+    private List<Weather> weather;
 
     public WeatherData(double temperature, double temperatureMin, double temperatureMax,
                        double pressure, double seaPressure, double grndPressure, int humidity,
-                       long visibility, double windSpeed, int windOrientation, int cloudiness, long sunriseTime, long sunsetTime, long fetchTime,
-                       double rainVol, double snowVol, Weather weather) {
+                       double windSpeed, int windOrientation, int cloudiness, long sunriseTime,
+                       long sunsetTime, long fetchTime,
+                       double rainVol, double snowVol, List<Weather> weather) {
         this.temperature = temperature;
         this.temperatureMin = temperatureMin;
         this.temperatureMax = temperatureMax;
@@ -26,7 +28,6 @@ public class WeatherData {
         this.seaPressure = seaPressure;
         this.grndPressure = grndPressure;
         this.humidity = humidity;
-        this.visibility = visibility;
         this.windSpeed = windSpeed;
         this.windOrientation = windOrientation;
         this.cloudiness = cloudiness;
@@ -66,10 +67,6 @@ public class WeatherData {
         return humidity;
     }
 
-    public long getVisibility() {
-        return visibility;
-    }
-
     public double getWindSpeed() {
         return windSpeed;
     }
@@ -102,16 +99,7 @@ public class WeatherData {
         return snowVol;
     }
 
-    public Weather getWeather() {
+    public List<Weather> getWeather() {
         return weather;
-    }
-
-    public String getWeatherDescription() {
-        return weather.getDesc();
-    }
-
-
-    public WeatherType getWeatherType(){
-        return weather.getType();
     }
 }
