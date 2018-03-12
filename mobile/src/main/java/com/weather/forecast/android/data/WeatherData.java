@@ -2,9 +2,6 @@ package com.weather.forecast.android.data;
 
 import java.util.List;
 
-/**
- * Created by Prayansh on 16-07-10.
- */
 public class WeatherData {
     private double temperature, temperatureMin, temperatureMax;
     private double pressure, seaPressure, grndPressure;

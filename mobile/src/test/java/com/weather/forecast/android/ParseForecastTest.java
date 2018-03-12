@@ -9,9 +9,7 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by Prayansh on 16-07-19.
- */
+
 public class ParseForecastTest {
     @Test
     public void testMumbai() {

@@ -1,8 +1,6 @@
 package com.weather.forecast.android;
 
-/**
- * Created by Prayansh on 16-07-10.
- */
+
 public class SampleData {
     public static final String MUM_WEATHER_DATA = "{\"coord\":{\"lon\":72.85,\"lat\":19.01},\"weather\":[{\"id\":501,\"main\":\"Rain\",\"description\":\"moderate rain\",\"icon\":\"10d\"}],\"base\":\"stations\",\"main\":{\"temp\":298.711,\"pressure\":1015.05,\"humidity\":100,\"temp_min\":298.711,\"temp_max\":298.711,\"sea_level\":1015.75,\"grnd_level\":1015.05},\"wind\":{\"speed\":7.46,\"deg\":248},\"rain\":{\"3h\":3.12},\"clouds\":{\"all\":92},\"dt\":1468135130,\"sys\":{\"message\":0.0109,\"country\":\"IN\",\"sunrise\":1468111074,\"sunset\":1468158605},\"id\":1275339,\"name\":\"Mumbai\",\"cod\":200}";
     public static final String VAN_WEATHER_DATA = "{\"coord\":{\"lon\":-123.12,\"lat\":49.25},\"weather\":[{\"id\":500,\"main\":\"Rain\",\"description\":\"light rain\",\"icon\":\"10n\"},{\"id\":701,\"main\":\"Mist\",\"description\":\"mist\",\"icon\":\"50n\"}],\"base\":\"stations\",\"main\":{\"temp\":287.2,\"pressure\":1016,\"humidity\":72,\"temp_min\":285.15,\"temp_max\":289.15},\"visibility\":32186,\"wind\":{\"speed\":2.6,\"deg\":60},\"clouds\":{\"all\":75},\"dt\":1468135606,\"sys\":{\"type\":1,\"id\":3359,\"message\":0.0177,\"country\":\"CA\",\"sunrise\":1468153155,\"sunset\":1468210572},\"id\":6173331,\"name\":\"Vancouver\",\"cod\":200}";

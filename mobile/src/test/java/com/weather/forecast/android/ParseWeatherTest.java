@@ -9,9 +9,7 @@ import org.junit.Test;
 
 import static junit.framework.Assert.assertEquals;
 
-/**
- * Created by Prayansh on 16-07-10.
- */
+
 public class ParseWeatherTest {
     @Test
     public void testMumbai() throws JSONException {
@@ -57,10 +55,6 @@ public class ParseWeatherTest {
 
         assertEquals(72, data.getHumidity());
         assertEquals(75, data.getCloudiness());
-
-        // fixme pavan u put the wrong values here, be more careful next time
-        // This code has been corrected
-        // remove comment after u have read and push again
         assertEquals(-1.0, data.getRainVol()); //Default Values
         assertEquals(-1.0, data.getSnowVol()); //Default Values
 
